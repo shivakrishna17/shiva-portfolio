@@ -19,7 +19,7 @@ const Projects = () => {
             title: 'MedplusMart',
             description: 'E-commerce catalog page with advanced filtering, sorting, and product listing features. Utilized React.js, Redux for state management, and Spring Boot backend with Redis caching for optimal performance.',
             tags: ['Java', 'Spring Boot', 'React.js', 'Redux', 'Redis'],
-            image: 'public/medplusmart.jpg',
+            image: import.meta.env.BASE_URL + 'medplusmart.jpg',
             github: 'https://www.medplusmart.com/',
             demo: '#'
         },

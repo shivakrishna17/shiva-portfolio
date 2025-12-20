@@ -38,7 +38,7 @@ const Hero = () => {
                             View Projects <ArrowRight className="ml-2 h-5 w-5" />
                         </a>
                         <a
-                            href="/Shiva_Resume.pdf"
+                            href={import.meta.env.BASE_URL + 'Shiva_Resume.pdf'}
                             download
                             className="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors w-full sm:w-48"
                         >
@@ -70,7 +70,7 @@ const Hero = () => {
                     <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto">
                         <div className="absolute inset-0 bg-blue-600 rounded-full opacity-10 animate-pulse"></div>
                         <img
-                            src="/IMG20251101180852.jpg"
+                            src={import.meta.env.BASE_URL + 'IMG20251101180852.jpg'}
                             alt="Profile"
                             className="rounded-full w-full h-full object-cover border-8 border-white dark:border-gray-800 shadow-2xl relative z-10"
                             style={{ objectPosition: 'center 10%' }}

@@ -7,7 +7,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-6">
                     <div className="text-center md:text-left">
                         <div className="flex-shrink-0 flex items-center gap-2">
-                            <img src="/logo.png" alt="Logo" className="h-10 w-10 object-contain rounded-full border border-blue-500/30 p-0.5" />
+                            <img src={import.meta.env.BASE_URL + 'logo.png'} alt="Logo" className="h-10 w-10 object-contain rounded-full border border-blue-500/30 p-0.5" />
                             <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Shiva Krishna</h3>
                         </div>
                         <p className="text-gray-600 dark:text-gray-400 text-sm">
