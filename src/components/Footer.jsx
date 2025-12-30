@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
+import { SITE } from '../config/site';
 
 const Footer = () => {
     return (
@@ -16,13 +17,13 @@ const Footer = () => {
                     </div>
 
                     <div className="flex gap-6">
-                        <a href="https://github.com/shivakrishna17" target="_blank" rel="noopener noreferrer" aria-label="Shiva's GitHub" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
+                        <a href={SITE.github} target="_blank" rel="noopener noreferrer" aria-label="Shiva's GitHub" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
                             <Github className="h-6 w-6" />
                         </a>
-                        <a href="https://www.linkedin.com/in/shiva-krishna-065553147/" target="_blank" rel="noopener noreferrer" aria-label="Shiva's LinkedIn" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
+                        <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Shiva's LinkedIn" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
                             <Linkedin className="h-6 w-6" />
                         </a>
-                        <a href="mailto:shivakrishna17@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email Shiva" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
+                        <a href={`mailto:${SITE.email}`} target="_blank" rel="noopener noreferrer" aria-label="Email Shiva" className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-500 transition-colors">
                             <Mail className="h-6 w-6" />
                         </a>
                     </div>

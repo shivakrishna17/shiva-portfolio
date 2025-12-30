@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { SITE } from '../config/site';
 
 const Contact = () => {
     const form = useRef();
@@ -71,10 +72,10 @@ const Contact = () => {
                             <div>
                                 <h3 className="text-lg font-bold text-gray-900 dark:text-white">Email</h3>
                                 <a
-                                    href="mailto:shivakrishnareddy17@gmail.com"
+                                    href={`mailto:${SITE.email}`}
                                     className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                 >
-                                    shivakrishnareddy17@gmail.com
+                                    {SITE.email}
                                 </a>
                             </div>
                         </div>

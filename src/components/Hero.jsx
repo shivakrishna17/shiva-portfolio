@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
+import { SITE } from '../config/site';
 
 const Hero = () => {
     const socialLinks = [
-        { icon: Github, href: 'https://github.com/shivakrishna17', label: 'GitHub' },
-        { icon: Linkedin, href: 'https://www.linkedin.com/in/shiva-krishna-065553147/', label: 'LinkedIn' },
-        { icon: Mail, href: 'mailto:shivakrishna17@gmail.com', label: 'Email' }
+        { icon: Github, href: SITE.github, label: 'GitHub' },
+        { icon: Linkedin, href: SITE.linkedin, label: 'LinkedIn' },
+        { icon: Mail, href: `mailto:${SITE.email}`, label: 'Email' }
     ];
 
     return (
@@ -37,12 +38,12 @@ const Hero = () => {
                             View Projects <ArrowRight className="ml-2 h-5 w-5" />
                         </a>
                         <a
-                            href={import.meta.env.BASE_URL + 'Shiva_Resume.pdf'}
+                            href={SITE.resume}
                             download
                             className="inline-flex items-center justify-center px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 rounded-lg font-semibold hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors w-full sm:w-48"
                         >
                             Resume <Download className="ml-2 h-5 w-5" />
-                        </a>
+                        </a> 
                     </div>
 
                     <div className="flex gap-4 items-center justify-center md:justify-start">
