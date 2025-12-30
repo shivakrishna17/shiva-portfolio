@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Projects = () => {
@@ -12,32 +12,28 @@ const Projects = () => {
             description: 'Background verification system for recruiters to verify candidate details before hiring. Designed with modular architecture, RESTful APIs, and achieved 100% test coverage with JUnit and Mockito.',
             tags: ['Java', 'Spring Boot', 'MySQL', 'JUnit'],
             image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&fit=crop&w=1770&q=80',
-            github: 'https://github.com/shivakrishna17/checker-application',
-            demo: '#'
+            github: 'https://github.com/shivakrishna17/checker-application'
         },
         {
             title: 'MedplusMart',
             description: 'E-commerce catalog page with advanced filtering, sorting, and product listing features. Utilized React.js, Redux for state management, and Spring Boot backend with Redis caching for optimal performance.',
             tags: ['Java', 'Spring Boot', 'React.js', 'Redux', 'Redis'],
             image: import.meta.env.BASE_URL + 'medplusmart.jpg',
-            github: 'https://www.medplusmart.com/',
-            demo: '#'
+            demo: 'https://www.medplusmart.com/'
         },
         {
             title: 'Chat Application',
             description: 'Real-time chat application built using Java web sockets and Java Swing for seamless communication.',
             tags: ['Java', 'WebSockets', 'Java Swing'],
             image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?ixlib=rb-4.0.3&fit=crop&w=1770&q=80',
-            github: 'https://github.com/shivakrishna17/chatApplication',
-            demo: '#'
+            github: 'https://github.com/shivakrishna17/chatApplication'
         },
         {
             title: 'Course Management System',
             description: 'Full-stack application for managing courses, students, and educational content with robust backend APIs and database management.',
             tags: ['Java', 'Spring Boot', 'MySQL'],
             image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&fit=crop&w=1770&q=80',
-            github: 'https://github.com/shivakrishna17/course-management',
-            demo: '#'
+            github: 'https://github.com/shivakrishna17/course-management'
         }
     ];
 
@@ -97,15 +93,19 @@ const Projects = () => {
                                             <img
                                                 src={project.image}
                                                 alt={project.title}
+                                                loading="lazy"
                                                 className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-black/50 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                                                <a href={project.github} target='_blank' className="p-2 bg-white/20 dark:bg-gray-700 backdrop-blur-sm rounded-full hover:bg-white/30 dark:hover:bg-gray-600 transition-colors">
-                                                    <Github className="h-6 w-6 text-white" />
-                                                </a>
-                                                <a href={project.demo} target='_blank' className="p-2 bg-white/20 dark:bg-gray-700 backdrop-blur-sm rounded-full hover:bg-white/30 dark:hover:bg-gray-600 transition-colors">
-                                                    <ExternalLink className="h-6 w-6 text-white" />
-                                                </a>
+                                                {project.demo && project.demo !== '#' ? (
+                                                    <a href={project.demo} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} demo`} className="p-2 bg-white/20 dark:bg-gray-700 backdrop-blur-sm rounded-full hover:bg-white/30 dark:hover:bg-gray-600 transition-colors">
+                                                        <ExternalLink className="h-6 w-6 text-white" />
+                                                    </a>
+                                                ) : (
+                                                    <a href={project.github} target='_blank' rel="noopener noreferrer" aria-label={`View ${project.title} on GitHub`} className="p-2 bg-white/20 dark:bg-gray-700 backdrop-blur-sm rounded-full hover:bg-white/30 dark:hover:bg-gray-600 transition-colors">
+                                                        <Github className="h-6 w-6 text-white" />
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
 

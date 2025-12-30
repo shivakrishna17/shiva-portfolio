@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 
 const Navbar = ({ isDark, toggleTheme }) => {
     const [isOpen, setIsOpen] = useState(false);

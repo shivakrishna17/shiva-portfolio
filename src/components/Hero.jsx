@@ -1,10 +1,9 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
     const socialLinks = [
-        { icon: Github, href: 'https://github.com/shivakrishna17', label: 'Github' },
+        { icon: Github, href: 'https://github.com/shivakrishna17', label: 'GitHub' },
         { icon: Linkedin, href: 'https://www.linkedin.com/in/shiva-krishna-065553147/', label: 'LinkedIn' },
         { icon: Mail, href: 'mailto:shivakrishna17@gmail.com', label: 'Email' }
     ];
@@ -54,6 +53,7 @@ const Hero = () => {
                                 className="p-3 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full shadow-md hover:text-blue-600 dark:hover:text-blue-500 transition-all duration-300 hover:-translate-y-1"
                                 aria-label={social.label}
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <social.icon className="h-6 w-6" />
                             </a>
@@ -72,6 +72,7 @@ const Hero = () => {
                         <img
                             src={import.meta.env.BASE_URL + 'IMG20251101180852.jpg'}
                             alt="Profile"
+                            loading="lazy"
                             className="rounded-full w-full h-full object-cover border-8 border-white dark:border-gray-800 shadow-2xl relative z-10"
                             style={{ objectPosition: 'center 10%' }}
                         />
